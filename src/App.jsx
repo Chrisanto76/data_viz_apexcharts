@@ -69,6 +69,7 @@ import BarChart from './components/BarChart';
 import DonutChart from './components/DonutChart';
 import LineChart from './components/LineChart';
 import NavBar from './components/NavBar';
+import TripChart from './components/TripChart';
 
 function App() {
 	const [data, setData] = useState([]);
@@ -118,19 +119,22 @@ function App() {
 			<NavBar />
 			<Container fluid className="">
 				<Row className="">
-					<Col md={4} className="App">
+					<Col md={4} className="p-1  bg-light border rounded-2">
 						<DonutChart data={data} />
 					</Col>
-					<Col md={4} className="App">
+					<Col md={4} className="p-1  bg-light border rounded-2">
 						<BarChart data={data} />
 					</Col>
-					<Col md={4} className="App">
+					<Col md={4} className="p-1  bg-light border rounded-2">
 						<PieChart data={data} />
 					</Col>
 				</Row>
 
-				<Row>
-					<Col md={6} className="App">
+				<Row className="justify-content-start">
+					<Col md={4} className="p-1  bg-light border rounded-2">
+						<TripChart data={data} />
+					</Col>
+					<Col md={4} className="p-1 bg-light border rounded-2">
 						<LineChart data={data} />
 					</Col>
 				</Row>
